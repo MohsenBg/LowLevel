@@ -31,5 +31,6 @@
 *.out
 *.app
 
+[Bb]uild
 .vs
 x64
