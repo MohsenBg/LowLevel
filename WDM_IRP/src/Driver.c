@@ -49,8 +49,8 @@ NTSTATUS DispatchIoCTLControl(PDEVICE_OBJECT DeviceObject, PIRP Irp) {
 		if (outputBufferLength >= sizeof(WCHAR)) {
 			if (buffer) {
 				ULONG maxMessageLength = (outputBufferLength / sizeof(WCHAR)) - 1;
-				wcsncpy((WCHAR*)buffer, message,maxMessageLength);
-				((WCHAR*)buffer)[maxMessageLength - 1] = L'\0'; 
+				wcsncpy((WCHAR*)buffer, message, maxMessageLength);
+				((WCHAR*)buffer)[maxMessageLength - 1] = L'\0';
 				informationLength = ((ULONG)wcsnlen((WCHAR*)buffer, maxMessageLength - 1) + 1) * sizeof(WCHAR);
 				KdPrint(("\n[WDM_IRP]: DEVICE_RECEIVE responded with: %ws.\r\n", (WCHAR*)buffer));
 			}
