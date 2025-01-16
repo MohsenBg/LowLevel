@@ -71,8 +71,8 @@
   <PropertyGroup />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
-    <OutDir>$(SolutionDir)\Build\$(Configuration)\kdmfHelloWorld\</OutDir>
-    <IntDir>$(SolutionDir)\Build\$(Configuration)\kdmfHelloWorld\IntermediateDir</IntDir>
+    <OutDir>$(SolutionDir)\Build\$(ProjectName)\$(Configuration)</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>

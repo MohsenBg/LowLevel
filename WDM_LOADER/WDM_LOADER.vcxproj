@@ -75,6 +75,9 @@
     <OutDir>$(SolutionDir)\Build\$(Configuration)\DRIVER_LOADER_STUPID</OutDir>
     <IntDir>$(SolutionDir)\Build\$(Configuration)\DRIVER_LOADER_STUPID\IntermediateDirectory</IntDir>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\Build\$(ProjectName)\$(Configuration)</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
